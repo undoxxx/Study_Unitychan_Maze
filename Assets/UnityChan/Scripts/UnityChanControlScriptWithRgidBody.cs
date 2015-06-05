@@ -197,5 +197,6 @@ namespace UnityChan
 			col.height = orgColHight;
 			col.center = orgVectColCenter;
 		}
+
 	}
 }

@@ -26,5 +26,14 @@ namespace UnityChan {
 			unitychan.enabled = false;
 
 		}
+
+		void OnCollisionStay(Collision c){
+			if(c.gameObject.tag == "Floor"){
+				transform.parent = c.gameObject.transform; //ユニティちゃんのtransform.parent
+			}
+		}
+		void OnCollisionExit(Collision c){
+			transform.parent = null; //ユニティちゃんのtransform.parent ヒエラルキー直下に移動させる
+		}
 	}
 }
